@@ -1,0 +1,51 @@
+
+
+How to set up your camera:
+
+	> Open a Terminal window
+
+	>> Type: "sudo raspi-config"
+
+	>> Select "3. Interface Options Configure connections to peripherals
+	   You need to use arrow keys to make selections.
+	
+	>> Select "I1: Legacy Camera Enable/disable legacy camera support"
+	   Legacy is to use "raspstill ...", and the latter one is to use "libcamera-xxx"
+	
+	>> Click "<Yes>" to enable legacy camera support
+	
+	>> You will see a message saying that "Legacy camera support is enabled". Click "<Okay>"
+	
+	>> Then you will come back to the previous screen page and please Select "Finish".
+	
+	>> Then you will come back to the terminal window and run "reboot".
+	
+	> After reboot, open a new Terminal window and type "raspistill -o test.jpg" to check whether there is a jpg figure has been saved in "\home\yanglab\"
+	
+	
+
+The PiCameraApp code pacakage can be downloaded from "Billwilliams1952/PicameraApp"
+
+	> Download and unzip it.  
+	
+	> Right click the "Source" subfolder and click "Open in Terminal"
+	
+	>> Type this line on the opened Terminal window:
+	   "sudo python3 PicameraApp.py"
+	   
+	> If there is an error about the imagetk package, please install it.
+	  Type this line on a new Terminal window:
+	  "sudo apt-get install python3-pil.imagetk"
+	
+	
+These lines need to be modified in the "Source" subfolder:
+	
+ 
+	File name: "PreferencesDialog.py"
+	Lines: 65-67, 76-78
+	Change:  "/home/pi/..." --> "/home/yanglab/..."
+	
+	File name: "PiCameraApp.py"
+	Replace "raw_input()" (python2) with "input()" (python3)
+
+
