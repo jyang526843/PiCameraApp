@@ -62,9 +62,9 @@ except ImportError:
 #
 class PreferencesDialog ( Dialog ):
 	# Static variables
-	DefaultPhotoDir = "/home/pi/Pictures"
-	DefaultVideoDir = "/home/pi/Videos"
-	DefaultFilesDir = "/home/pi/Documents"
+	DefaultPhotoDir = "/home/yanglab/Pictures"
+	DefaultVideoDir = "/home/yanglab/Videos"
+	DefaultFilesDir = "/home/yanglab/Documents"
 	DefaultPhotoFormat = 'jpeg'
 	DefaultVideoFormat = 'h264'
 	DefaultTimestampFormat = "%m-%d-%Y-%H:%M:%S"
@@ -73,9 +73,9 @@ class PreferencesDialog ( Dialog ):
 	@staticmethod
 	# Called if Reset Camera is clicked
 	def Reset ():
-		DefaultPhotoDir = "/home/pi/Pictures"
-		DefaultVideoDir = "/home/pi/Videos"
-		DefaultFilesDir = "/home/pi/Documents"
+		DefaultPhotoDir = "/home/yanglab/Pictures"
+		DefaultVideoDir = "/home/yanglab/Videos"
+		DefaultFilesDir = "/home/yanglab/Documents"
 		DefaultPhotoFormat = 'jpeg'
 		DefaultVideoFormat = 'h264'
 		DefaultTimestampFormat = "%m-%d-%Y-%H:%M:%S"

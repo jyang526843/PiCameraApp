@@ -1104,7 +1104,7 @@ def Run ():
 		win = Tk()
 	except:
 		print ( "Error initializing Tkinter!\n\nShutting down\n\nPress any key" )
-		raw_input()
+		input()
 		return
 
 	Style().theme_use('clam')	# I like this theme, so sue me.
@@ -1116,7 +1116,7 @@ def Run ():
 		camera.sensor_mode = 0	# go back to auto mode
 	except PiCameraError:
 		print ( "Error creating PiCamera instance! Shutting down.\n\nPress any key..." )
-		raw_input()
+		input()
 		return
 
 	win.minsize(1024,768)
